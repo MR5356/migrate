@@ -42,4 +42,4 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
       - name: Build and Push Docker Image
-        run: docker buildx build --platform linux/amd64,linux/arm64 -t toodo/migrate:latest .
+        run: docker buildx build --platform linux/amd64,linux/arm64 -t toodo/migrate:latest . --push
