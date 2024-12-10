@@ -15,7 +15,7 @@ COPY . ./
 
 RUN make build-docker
 
-RUN copy /go/src/github.com/golang-migrate/migrate/build/migrate.linux-386 /usr/local/bin/migrate && \
+RUN cp /go/src/github.com/golang-migrate/migrate/build/migrate.linux-386 /usr/local/bin/migrate && \
     ln -s /usr/local/bin/migrate /migrate
 
 ENTRYPOINT ["migrate"]
